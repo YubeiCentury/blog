@@ -1,4 +1,4 @@
-baseurl = "http://blog.yubei.online"
+baseurl = "http://blog.yubei.online/"
 languageCode = "en-us"
 title = "blogs"
 theme="hugo-base-theme"
