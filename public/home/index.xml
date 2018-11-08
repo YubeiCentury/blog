@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on hikari</title>
+    <link>http://blog.yubei.online/home/</link>
+    <description>Recent content in Homes on hikari</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://blog.yubei.online/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/features/</guid>
+      <description> What&amp;rsquo;s included?  All Reveal.js HTML, CSS and JS (v3.7.0) All out-of-the-box Reveal.js themes Two custom Reveal.js themes (including this one)  Features  Write slides in Markdown in one or more files Shorcodes for fragments, sections, slides &amp;amp; more All Reveal.js parameters can be customized Any Hugo section can be output as a presentation  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/usage/</guid>
+      <description>Usage Prerequisite First, add this to your config.toml:
+[outputFormats.Reveal] baseName = &amp;quot;index&amp;quot; mediaType = &amp;quot;text/html&amp;quot; isHTML = true  Presentation at site root Create content/_index.md:
++++ outputs = [&amp;quot;Reveal&amp;quot;] +++ # Slide 1 Hello world!  Add slides in same file Separate them by ---:
+# Slide 1 Hello world! --- # Slide 2 Hello program!  Add slides with other files Add slides to content/home/*.md
++++ weight = 10 +++ # Slide 3 --- # Slide 4  💡 Tip: Use weight to specify the order that files should be added.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/configuration/</guid>
+      <description>Configuration Place configuration values in config.toml or a presentation&amp;rsquo;s front matter (_index.md).
+Reveal.js themes Themes control the look and feel of your presentation. Set the theme param to any valid Reveal.js theme.
+[params.reveal_hugo] theme = &amp;quot;moon&amp;quot;  Use a custom theme To use a custom Reveal.js theme, place the CSS file in the static directory and set the custom_theme param.
+[params.reveal_hugo] custom_theme = &amp;quot;reveal-hugo/themes/robot-lung.css&amp;quot;  Bundled themes reveal-hugo comes with 2 extra Reveal.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/shortcodes/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/shortcodes/introduction/</guid>
+      <description>Shortcodes Hugo&amp;rsquo;s shortcodes are similar to functions or templates that extend what you can do with Markdown.
+Shortcode documentation</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/shortcodes/fragment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/shortcodes/fragment/</guid>
+      <description>Fragment The fragment shortcode makes content appear incrementally.
+{{%/* fragment */%}} One {{%/* /fragment */%}} {{%/* fragment */%}} Two {{%/* /fragment */%}} {{%/* fragment */%}} Three {{%/* /fragment */%}}  {{% fragment %}} One {{% /fragment %}} {{% fragment %}} Two {{% /fragment %}} {{% fragment %}} Three {{% /fragment %}}
+Frag The frag shortcode is more terse than fragment. It accepts a c attribute.
+{{&amp;lt;/* frag c=&amp;quot;One&amp;quot; */&amp;gt;}} {{&amp;lt;/* frag c=&amp;quot;Two&amp;quot; */&amp;gt;}} {{&amp;lt;/* frag c=&amp;quot;Three&amp;quot; */&amp;gt;}}  {{&amp;lt; frag c=&amp;ldquo;One&amp;rdquo; &amp;gt;}} {{&amp;lt; frag c=&amp;ldquo;Two&amp;rdquo; &amp;gt;}} {{&amp;lt; frag c=&amp;ldquo;Three&amp;rdquo; &amp;gt;}}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/shortcodes/section/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/shortcodes/section/</guid>
+      <description>{{% section %}}
+Section The section shortcode groups slides into a vertical display.
+
+ use the down arrow or swipe down to continue  🔽
+Put the shortcode around the slides you want to group together.
+{{%/* section */%}} ## Section slide 1 --- ## Section slide 2 {{%/* /section */%}}  Keep going down.
+That&amp;rsquo;s it! Use the right arrow or swipe right to continue.
+{{% /section %}}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/shortcodes/slide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/shortcodes/slide/</guid>
+      <description>Slide Use this shortcode when you need to customize slide attributes like id, class, background color and transition.
+{{&amp;lt; slide class=&amp;ldquo;hello&amp;rdquo; &amp;gt;}}
+Slide Add the shortcode above the slide&amp;rsquo;s content, below the ---.
+--- {{&amp;lt;/* slide class=&amp;quot;hello&amp;quot; */&amp;gt;}} ## Hello, world! ---  {{&amp;lt; slide transition=&amp;ldquo;zoom&amp;rdquo; transition-speed=&amp;ldquo;fast&amp;rdquo; &amp;gt;}}
+Custom slide 1 Did you notice? This slide has a fast zoom transition.
+--- {{&amp;lt;/* slide transition=&amp;quot;zoom&amp;quot; transition-speed=&amp;quot;fast&amp;quot; */&amp;gt;}} ## Custom slide 1 ---  {{&amp;lt; slide background-color=&amp;ldquo;#FF4081&amp;rdquo; &amp;gt;}}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/shortcodes/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/shortcodes/markdown/</guid>
+      <description>{{&amp;lt; markdown &amp;gt;}}
+Markdown Reveal.js has its own markdown processor. To use that instead of Hugo, surround a slide with the markdown shortcode.
+{{&amp;lt;/* markdown */&amp;gt;}} # Hello world! {{&amp;lt;/* /markdown */&amp;gt;}}  
+ 💡 Make sure to use the {{&amp;lt;/* */&amp;gt;}} shortcode syntax to avoid rendering by Hugo. 
+Reveal.js markdown uses HTML comments to change slide properties, like background color.
+{{&amp;lt;/* markdown */&amp;gt;}} &amp;lt;!-- .slide: data-background=&amp;quot;#FF4081&amp;quot; --&amp;gt; # I&#39;m a colorful slide {{&amp;lt;/* /markdown */&amp;gt;}}  {{&amp;lt; /markdown &amp;gt;}}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/shortcodes/other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/shortcodes/other/</guid>
+      <description>Note Add speaker notes to your presentation with the note shortcode.
+{{%/* note */%}} Type &#39;s&#39; to see this slide&#39;s speaker notes. {{%/* /note */%}}  {{% note %}}
+You found the speaker notes!
+{{% /note %}}
+Write slides in HTML Use a section tag with a data-noprocess attribute to avoid any processing by reveal-hugo.
+ &amp;lt;section data-noprocess&amp;gt; &amp;lt;h1&amp;gt;Hello world!&amp;lt;/h1&amp;gt; &amp;lt;section&amp;gt; 💡 This is useful if you can&#39;t get Markdown to output exactly what you want.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blog.yubei.online/home/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yubei.online/home/resources/</guid>
+      <description> Resources Code and docs  reveal-hugo Github README Content for this presentation  External resources  Reveal.js Hugo docs Hugo output format docs  Designed to&amp;hellip;  Deploy to Netlify Edit with Forestry  🙏 Contribute by opening issues and pull requests.
+Thanks! ↩️ Start over </description>
+    </item>
+    
+  </channel>
+</rss>

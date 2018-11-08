@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+
+
+ <html class="no-js"> 
+<head>
+    <title> &middot; hikari</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Your name">
+    <meta name="description" content="Describe your website">
+    <meta name="generator" content="Hugo 0.49.2" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://blog.yubei.online/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    
+    <div class="off-canvas">
+    <figure class="avatar">
+        <img src="http://blog.yubei.online/img/avatar.jpg" title="Your name">
+    </figure>
+    <div class="bio">
+        
+        <h1>Hi, I&#39;m John Doe</h1>
+        
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, pariatur!</p>
+        
+    </div>
+    <nav>
+
+        
+
+        
+        <h6>Subscribe</h6>
+        
+
+        <ul>
+            <li><a target="_blank" href="http://blog.yubei.online/index.xml">RSS feed</a></li>
+        </ul>
+
+        
+        <h6>Follow me on</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="//github.com/spf13">Github</a></li>
+        
+            <li><a target="_blank" href="//twitter.com/spf13">Twitter</a></li>
+        
+        </ul>        
+    </nav>
+</div>
+
+
+    <div class="site-wrapper">
+        <header>
+	<div class="h-wrap">
+		
+		<h1 class="title"><a href="http://blog.yubei.online/">hikari</a></h1>
+		
+		<a class="menu-icon" title="Menu"><span class="lines"></span></a>
+	</div>
+</header>
+        
+        <section class="single-wrap">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    1. January 0001
+                    </time>
+                    </h5>
+                </div>
+                <h1 class="page-title" itemprop="name headline"></h1>
+                <div itemprop="articleBody">
+                    
+
+<h1 id="configuration">Configuration</h1>
+
+<p>Place configuration values in <code>config.toml</code> or a presentation&rsquo;s front matter (<code>_index.md</code>).</p>
+
+<hr />
+
+<h2 id="reveal-js-themes">Reveal.js themes</h2>
+
+<p>Themes control the look and feel of your presentation. Set the <code>theme</code> param to any <a href="https://github.com/hakimel/reveal.js/#theming">valid Reveal.js theme</a>.</p>
+
+<pre><code class="language-toml">[params.reveal_hugo]
+theme = &quot;moon&quot;
+</code></pre>
+
+<hr />
+
+<h2 id="use-a-custom-theme">Use a custom theme</h2>
+
+<p>To use a custom Reveal.js theme, place the CSS file in the <code>static</code> directory and set the <code>custom_theme</code> param.</p>
+
+<pre><code class="language-toml">[params.reveal_hugo]
+custom_theme = &quot;reveal-hugo/themes/robot-lung.css&quot;
+</code></pre>
+
+<hr />
+
+<h2 id="bundled-themes">Bundled themes</h2>
+
+<p>reveal-hugo comes with 2 extra Reveal.js themes:</p>
+
+<ul>
+<li><a href="https://github.com/dzello/revealjs-themes#robot-lung">robot-lung</a> (this one)</li>
+<li><a href="https://github.com/dzello/revealjs-themes#sunblind">sunblind</a></li>
+</ul>
+
+<p><br>
+<small>
+They live in the <code>static/reveal-hugo/themes</code> folder and also <a href="https://github.com/dzello/revealjs-themes">on Github</a>.
+</small></p>
+
+<hr />
+
+<h2 id="reveal-js-params">Reveal.js params</h2>
+
+<p>Set <strong>snakecase</strong> versions of Reveal.js params, which will be camelized and passed to <code>Reveal.initialize</code>.</p>
+
+<pre><code class="language-toml">[params.reveal_hugo]
+history = true
+slide_number = true
+transition = 'zoom'
+transition_speed = 'fast'
+</code></pre>
+
+<p><a href="https://github.com/hakimel/reveal.js/#configuration">Full list of params</a></p>
+
+<hr />
+
+<h2 id="highlight-js-themes">highlight.js themes</h2>
+
+<p>To change the syntax highlighting theme, set the <code>highlight_theme</code>
+to a valid <a href="https://highlightjs.org/static/demo/">highlight.js theme name</a>.</p>
+
+<pre><code class="language-toml">[params.reveal_hugo]
+highlight_theme = &quot;zenburn&quot;
+</code></pre>
+
+<hr />
+
+<h2 id="extending-the-layout">Extending the layout</h2>
+
+<p>Use partials to add HTML to the page for one or all presentations at a time.</p>
+
+<p><small>
+💡 This is the recommended way to add script and style tags to customize your presentations.
+</small></p>
+
+<hr />
+
+<p>Here is where to put partials for different presentations and places in the DOM.
+<br><br></p>
+
+<table>
+<thead>
+<tr>
+<th>Presentation</th>
+<th>Before &lt;/head&gt;</th>
+<th>Before &lt;/body&gt;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>All</td>
+<td>reveal-hugo/head.html</td>
+<td>reveal-hugo/body.html</td>
+</tr>
+
+<tr>
+<td>Root</td>
+<td>home/reveal-hugo/head.html</td>
+<td>home/reveal-hugo/body.html</td>
+</tr>
+
+<tr>
+<td>Section</td>
+<td>{section}/reveal-hugo/head.html</td>
+<td>{section}/reveal-hugo/body.html</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><small>
+💡 You can also create an <code>end.html</code> to put content before the end of the <code>.reveal</code> div tag.
+</small></p>
+
+<hr />
+
+<h2 id="custom-css-example">Custom CSS Example</h2>
+
+<p>In <code>home/reveal-hugo/head.html</code>:</p>
+
+<pre><code class="language-html">&lt;style&gt;
+.reveal section h1 {
+  color: blue;
+}
+&lt;/style&gt;
+</code></pre>
+
+<hr />
+
+<h2 id="custom-js-example">Custom JS Example</h2>
+
+<p>In <code>home/reveal-hugo/body.html</code>:</p>
+
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+Reveal.addEventListener('slidechanged', function(event) {
+  console.log(&quot;🎞️ Slide is now &quot; + event.indexh);
+});
+&lt;/script&gt;
+</code></pre>
+
+                </div>
+                <div class="feat share">
+                    <a href="//twitter.com/share" class="popup">
+                        <span class="icon-twitter"></span>
+                    </a>
+                </div>
+                
+                <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "spf13" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                
+                    <a rel="next" href="http://blog.yubei.online/home/usage/" id="next">
+                        <span class="nav-title nav-title-next">Newer</span> &rarr;
+                    </a>
+                
+                
+                    <a rel="prev" href="http://blog.yubei.online/home/shortcodes/introduction/" id="prev">
+                        &larr; <span class="nav-title nav-title-prev">Older</span>
+                    </a>
+                
+            </article>
+        </section>
+
+        <footer>
+	
+	<small>POWERED BY <a href="//gohugo.io">HUGO</a> - THEME: <a href="//github.com/digitalcraftsman/hugo-hikari-theme">HIKARI</a> - © JOHN DOE</small>
+	
+</footer>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://blog.yubei.online/js/main.js"></script>
+
+
+
+
+<!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
